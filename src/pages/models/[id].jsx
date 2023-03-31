@@ -3,10 +3,10 @@ import { useRouter } from "next/router";
 import WebsiteLayout from "@/layouts/WebsiteLayout";
 import pics from "../../json/images.json";
 import Image from "next/image";
-import { data } from "../../json/data.jsx";
+import data from "../../json/data.json";
 
-const id = ({ data }) => {
-  console.log(data);
+const id = ({ modelslist }) => {
+  console.log(modelslist);
   const router = useRouter();
   if (router.isFallback) {
     return <h1>Loading</h1>;
@@ -68,25 +68,28 @@ const id = ({ data }) => {
           </label>
         </div>
 
-        {data.images?.map((data) => {
+        {modelslist.images?.map((data) => {
           return (
-            <div key={data.id} className="gallery__item">
+            <div key={modelslist.id} className="gallery__item">
               <input
                 type="radio"
-                id={`img-${data.id}`}
+                id={`img-${modelslist.id}`}
                 name="gallery"
                 className="gallery__selector"
               />
               <Image
                 className="gallery__img rounded-t-lg mt-5"
-                src={data.src}
+                src={modelslist.src}
                 alt="guitare-picture"
                 width={500}
                 height={500}
               />
-              <label htmlFor={`img-${data.id}`} className="gallery__thumb">
+              <label
+                htmlFor={`img-${modelslist.id}`}
+                className="gallery__thumb"
+              >
                 <Image
-                  src={data.src}
+                  src={modelslist.src}
                   alt="miniature-guitare"
                   width={100}
                   height={100}
@@ -188,29 +191,31 @@ const id = ({ data }) => {
       </section>
       {/* DETAILs */}
       <h2 className="text-2xl text-color-secondary m-5 p-5 border-b-1 border-black font-bold">
-        {data.name}
+        {modelslist.name}
       </h2>
       <h3 className="text-xl font-bold text-color-secondary">Categorie</h3>
-      <span className="text-color-secondary text-lg">{data.categorie}</span>
+      <span className="text-color-secondary text-lg">
+        {modelslist.categorie}
+      </span>
       <h3 className="text-xl font-bold text-color-secondary ">Description</h3>
       <p className="m-2 md:w-40vw sm:w-70vw text-lg text-center text-color-secondary ">
-        {data.description}
+        {modelslist.description}
       </p>
       <h3 className="text-xl font-bold text-color-secondary">Details</h3>
       <div className="container-details text-center text-color-secondary">
         <span className="text-color-secondary text-lg">
           {" "}
-          Nut width: {data.width}
+          Nut width: {modelslist.width}
         </span>
         <br />
         <span className="text-color-secondary text-lg">
           {" "}
-          Scale length: {data.length}
+          Scale length: {modelslist.scaleLength}
         </span>
         <br />
         <span className="text-color-secondary text-lg">
           {" "}
-          Weight: {data.weight}
+          Weight: {modelslist.weight}
         </span>
         <br />
         <span className="text-color-secondary text-lg"> Top: {data.top}</span>
@@ -257,7 +262,7 @@ export async function getStaticProps(context) {
   let filter = data.filter((element) => element.id === slug);
   return {
     // Passed to the page component as props
-    props: { data: filter || null },
+    props: { modelslist: filter || null },
   };
 }
 
