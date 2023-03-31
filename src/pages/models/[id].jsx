@@ -29,14 +29,14 @@ const id = ({ model }) => {
             height={500}
             className="gallery__img rounded-t-lg mt-5"
           />
-          <label htmlFor={`img-0`} className="gallery__thumb">
+          {/* <label htmlFor={`img-0`} className="gallery__thumb">
             <Image
               src={model.cover}
               alt="miniature-guitare"
               width={100}
               height={100}
             />
-          </label>
+          </label> */}
         </div>
 
         {model.images?.map((image) => {
