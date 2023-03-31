@@ -318,7 +318,21 @@ a {
   transition: width 0.3s, height 0.3s, opacity 0.3s;
   z-index: 10000;
 }
+/* @media screen and (width: 500px) {
+  .cursor {
+    display: none;
+  }
 
+  .cursor2 {
+    display: none;
+  }
+  .cursorinnerhover {
+    display: none;
+  }
+  .hover {
+    display: none;
+  }
+} */
 .hover {
   background-color: gray;
   opacity: 0.5;
