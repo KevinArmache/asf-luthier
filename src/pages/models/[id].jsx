@@ -73,23 +73,20 @@ const id = ({ modelslist }) => {
             <div key={modelslist.id} className="gallery__item">
               <input
                 type="radio"
-                id={`img-${modelslist.id}`}
+                id={`img-${data.id}`}
                 name="gallery"
                 className="gallery__selector"
               />
               <Image
                 className="gallery__img rounded-t-lg mt-5"
-                src={modelslist.src}
+                src={data.src}
                 alt="guitare-picture"
                 width={500}
                 height={500}
               />
-              <label
-                htmlFor={`img-${modelslist.id}`}
-                className="gallery__thumb"
-              >
+              <label htmlFor={`img-${data.id}`} className="gallery__thumb">
                 <Image
-                  src={modelslist.src}
+                  src={data.src}
                   alt="miniature-guitare"
                   width={100}
                   height={100}
