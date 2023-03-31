@@ -220,7 +220,7 @@ const id = ({ modelslist }) => {
         <br />
         <br />
         <span className="text-color-secondary text-lg">
-          Pictures Courtesy of {data.picturesCourtesy}
+          Pictures Courtesy of {modelslist.picturesCourtesy}
         </span>
       </div>
     </WebsiteLayout>
