@@ -3,38 +3,13 @@ import { Icon } from "@iconify/react";
 import Link from "next/link";
 import Image from "next/image";
 
-const CardInstrument = ({
-  id,
-  name,
-  cover,
-  length,
-  categorie,
-  top,
-  weight,
-  width,
-  description,
-  picturesCourtesy,
-  images,
-}) => {
+const CardInstrument = ({ id, name, cover }) => {
   return (
     <div>
       <div className="w-60 m-1 bg-white border border-gray-200 rounded-lg shadow  ">
         <Link
           href={{
             pathname: `/models/${id}`,
-            query: {
-              id: id,
-              name: name,
-              cover: cover,
-              categorie: categorie,
-              length: length,
-              top: top,
-              weight: weight,
-              width: width,
-              description: description,
-              picturesCourtesy: picturesCourtesy,
-              images: images,
-            },
           }}
           as={`/models/${id}`}
           passHref={true}
@@ -51,19 +26,6 @@ const CardInstrument = ({
           <Link
             href={{
               pathname: `/models/${id}`,
-              query: {
-                id: id,
-                name: name,
-                cover: cover,
-                categorie: categorie,
-                length: length,
-                top: top,
-                weight: weight,
-                width: width,
-                description: description,
-                picturesCourtesy: picturesCourtesy,
-                images: images,
-              },
             }}
             as={`/models/${id}`}
           >
@@ -74,19 +36,6 @@ const CardInstrument = ({
           <Link
             href={{
               pathname: `/models/${id}`,
-              query: {
-                id: id,
-                name: name,
-                cover: cover,
-                categorie: categorie,
-                length: length,
-                top: top,
-                weight: weight,
-                width: width,
-                description: description,
-                picturesCourtesy: picturesCourtesy,
-                images: images,
-              },
             }}
             as={`/models/${id}`}
             className="inline-flex items-center px-3 py-2 transition-all hover:border-color-secondary text-sm hover:bg-color-secondary hover:text-white font-medium text-center text-color-secondary bg-transparent  border-1 border-black focus:ring-4 focus:outline-none"

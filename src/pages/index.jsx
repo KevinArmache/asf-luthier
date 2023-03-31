@@ -7,7 +7,7 @@ import Loader from "@/components/Loader/Loader";
 export default function Home() {
   return (
     <>
-      <Loader />
+      {/* <Loader /> */}
       <WebsiteLayout>
         <div className=" layout container-image-home 2xl:w-40vw xl:w-50vw sm:w-50vw ">
           <div className="container-image ">

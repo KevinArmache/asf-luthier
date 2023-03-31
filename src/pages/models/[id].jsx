@@ -1,7 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
 import WebsiteLayout from "@/layouts/WebsiteLayout";
-import pics from "../../json/images.json";
 import Image from "next/image";
 import modelsList from "../../json/data.json";
 

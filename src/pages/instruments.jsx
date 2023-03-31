@@ -4,9 +4,6 @@ import CardInstrument from "@/components/CardInstrument/CardInstrument";
 import data from "../json/data.json";
 
 const instruments = () => {
-  // let stringify = JSON.stringify(item);
-  // let models = JSON.parse(stringify);
-  // console.log(models);
   return (
     <WebsiteLayout>
       <h2 className="text-2xl text-black text-center m-5 p-5 border-b-1 border-black font-bold">
@@ -22,14 +19,6 @@ const instruments = () => {
               name={item.name}
               cover={item.cover}
               id={item.id}
-              categorie={item.categorie}
-              length={item.scaleLength}
-              top={item.top}
-              weight={item.weight}
-              width={item.nutWidth}
-              description={item.description}
-              picturesCourtesy={item.picturesCourtesy}
-              images={item.images}
             />
           ) : (
             ""
@@ -47,14 +36,6 @@ const instruments = () => {
               name={item.name}
               cover={item.cover}
               id={item.id}
-              categorie={item.categorie}
-              length={item.scaleLength}
-              top={item.top}
-              weight={item.weight}
-              width={item.nutWidth}
-              description={item.description}
-              picturesCourtesy={item.picturesCourtesy}
-              images={item.images}
             />
           ) : (
             ""
