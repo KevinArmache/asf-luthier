@@ -68,25 +68,25 @@ const id = ({ modelslist }) => {
           </label>
         </div>
 
-        {modelslist.images?.map((data) => {
+        {modelslist.images?.map((item) => {
           return (
-            <div key={modelslist.id} className="gallery__item">
+            <div key={item.id} className="gallery__item">
               <input
                 type="radio"
-                id={`img-${data.id}`}
+                id={`img-${item.id}`}
                 name="gallery"
                 className="gallery__selector"
               />
               <Image
                 className="gallery__img rounded-t-lg mt-5"
-                src={data.src}
+                src={item.src}
                 alt="guitare-picture"
                 width={500}
                 height={500}
               />
-              <label htmlFor={`img-${data.id}`} className="gallery__thumb">
+              <label htmlFor={`img-${item.id}`} className="gallery__thumb">
                 <Image
-                  src={data.src}
+                  src={item.src}
                   alt="miniature-guitare"
                   width={100}
                   height={100}
