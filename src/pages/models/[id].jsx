@@ -1,7 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
 import WebsiteLayout from "@/layouts/WebsiteLayout";
-import pics from "../../json/images.json";
 import Image from "next/image";
 import data from "../../json/data.json";
 
@@ -202,7 +201,7 @@ const id = ({ modelslist }) => {
       <div className="container-details text-center text-color-secondary">
         <span className="text-color-secondary text-lg">
           {" "}
-          Nut width: {modelslist.width}
+          Nut width: {modelslist.nutWidth}
         </span>
         <br />
         <span className="text-color-secondary text-lg">
