@@ -7,6 +7,7 @@ const Loader = () => {
     window.addEventListener("load", () => {
       if (sessionStorage.getItem("premierChargement") === null) {
         loading.classList.add("fondu-out");
+        loading.style.display = "none";
       } else {
         loading.style.display = "none";
       }

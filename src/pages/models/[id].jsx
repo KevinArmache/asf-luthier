@@ -6,6 +6,7 @@ import data from "../../json/data.json";
 
 const id = ({ modelslist }) => {
   console.log(modelslist);
+  console.log(modelslist.name);
   const router = useRouter();
   if (router.isFallback) {
     return <h1>Loading</h1>;
