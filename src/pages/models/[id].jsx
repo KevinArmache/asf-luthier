@@ -81,7 +81,7 @@ const id = ({ model }) => {
       <div className="container-details text-center text-color-secondary">
         <span className="text-color-secondary text-lg">
           {" "}
-          Nut width: {model.width}
+          Nut width: {model.nutWidth}
         </span>
         <br />
         <span className="text-color-secondary text-lg">
