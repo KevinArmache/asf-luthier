@@ -233,7 +233,7 @@ const id = ({ modelslist }) => {
 export async function getStaticPaths() {
   // const parse = JSON.parse(data);
   let alldata = data;
-  const paths = alldata.map((path) => {
+  const paths = await alldata.map((path) => {
     return {
       params: { id: path.id.toString() },
     };
