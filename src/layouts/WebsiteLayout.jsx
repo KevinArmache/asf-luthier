@@ -9,7 +9,7 @@ import Cursor from "@/components/Cursor/cursor";
 const WebsiteLayout = ({ children }) => {
   return (
     <>
-      <Cursor />
+      {/* <Cursor /> */}
 
       <Head>
         <title>Adrien Savary Freestone</title>
