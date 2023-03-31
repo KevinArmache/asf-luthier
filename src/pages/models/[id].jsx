@@ -52,7 +52,7 @@ const id = ({ modelslist }) => {
             className="gallery__selector"
           />
           <Image
-            src={data.cover}
+            src={modelslist.cover}
             alt="guitare-picture"
             width={500}
             height={500}
@@ -60,7 +60,7 @@ const id = ({ modelslist }) => {
           />
           <label htmlFor={`img-0`} className="gallery__thumb">
             <Image
-              src={data.cover}
+              src={modelslist.cover}
               alt="miniature-guitare"
               width={100}
               height={100}
