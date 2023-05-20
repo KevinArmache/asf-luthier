@@ -2,6 +2,7 @@ import React from "react";
 import { Icon } from "@iconify/react";
 
 const IconMail = () => {
+  console.log("object");
   return (
     <div className="container-icon-mail">
       <div className="flex flex-col w-1 mx-auto">
